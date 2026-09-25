@@ -1,0 +1,45 @@
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-media {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.social-media-text {
+  margin: 0 0 12px;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.social-media-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.social-media-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  text-decoration: none;
+  font-size: 16px;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.social-media-links a:hover {
+  opacity: 0.7;
+  transform: translateY(-2px);
+}
+
+.social-media-bullet {
+  color: #999999;
+  font-size: 12px;
+  line-height: 0.5;
+}

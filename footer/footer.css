@@ -1,0 +1,18 @@
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer {
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background: #f7f7f5;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #787774;
+  font-size: 12px;
+  line-height: 1.5;
+}
