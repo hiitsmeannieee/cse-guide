@@ -42,6 +42,15 @@ fetch(dailyQuotePath)
   .then(response => response.text())
   .then(data => {
     document.getElementById("daily-quote").innerHTML = data;
+
+    const dailyQuoteIcon = document.querySelector(".daily-quote-button img");
+
+    if (dailyQuoteIcon) {
+      dailyQuoteIcon.src = isNestedPage
+        ? "../images/icon.png"
+        : "images/icon.png";
+    }
+
     setDailyQuote();
   });
 
