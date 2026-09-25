@@ -1,0 +1,31 @@
+<div class="daily-quote-widget">
+
+  <!-- Dark overlay -->
+  <div class="daily-quote-overlay" id="dailyQuoteOverlay"></div>
+
+  <!-- Floating icon -->
+  <button
+    class="daily-quote-button"
+    onclick="showDailyQuote()"
+    aria-label="Open daily quote"
+  >
+    <img src="../images/icon.png" alt="Daily quote">
+  </button>
+  <div class="daily-quote-hint">click me!</div>
+
+  <!-- Quote popup -->
+  <div class="daily-quote-popup" id="dailyQuotePopup">
+
+    <button
+      class="daily-quote-close"
+      onclick="closeDailyQuote()"
+      aria-label="Close"
+    >
+      &times;
+    </button>
+
+    <p id="dailyQuoteText"></p>
+
+  </div>
+
+</div>

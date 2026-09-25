@@ -1,0 +1,182 @@
+/* =========================
+   DAILY QUOTE
+========================= */
+
+.daily-quote-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.25s ease;
+}
+
+/* Smooth, gentle pulsing */
+.daily-quote-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: dailyQuotePulse 2.8s ease-in-out infinite;
+}
+
+/* Pulse animation */
+@keyframes dailyQuotePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Keep the hover animation */
+.daily-quote-button:hover {
+  transform: scale(1.12);
+}
+
+
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.daily-quote-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.80);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10000;
+  transition:
+    opacity 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.daily-quote-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================
+   DAILY QUOTE POPUP
+========================= */
+
+.daily-quote-popup {
+  position: fixed;
+  right: 25px;
+  bottom: 95px;
+  width: 280px;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e3e3e0;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.97);
+  z-index: 10002;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease,
+    visibility 0.35s ease;
+}
+
+.daily-quote-popup.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+
+/* =========================
+   QUOTE TEXT
+========================= */
+
+.daily-quote-popup p {
+  margin: 0;
+  color: #37352f;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.daily-quote-close {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #999999;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.daily-quote-close:hover {
+  color: #555555;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 560px) {
+  .daily-quote-button {
+    right: 15px;
+    bottom: 15px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .daily-quote-popup {
+    right: 15px;
+    bottom: 80px;
+    width: calc(100% - 30px);
+    max-width: 280px;
+  }
+}
+
+.daily-quote-hint {
+  position: fixed;
+  right: 28px;
+  bottom: 88px;
+  padding: 5px 9px;
+  background: #ffffff;
+  color: #555555;
+  border: 1px solid #e3e3e0;
+  border-radius: 6px;
+  font-size: 11px;
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5px);
+  z-index: 10002;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+.daily-quote-button:hover + .daily-quote-hint {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
