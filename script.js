@@ -177,7 +177,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // CSC Official Announcement - Paano Page
   const announcementLink = document.querySelector('a[href="https://example.com"]');
-  
   if (announcementLink) {
     announcementLink.addEventListener("click", () => {
       if (typeof gtag === "function") {
@@ -216,3 +215,76 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+
+// ==================================
+// "REQUIREMENTS" PAGE LINK TRACKING
+// ==================================
+
+// Requirements - CSC Application Form
+const cseApplicationFormLink = document.querySelector(
+  'a[href="https://csc.gov.ph/downloads/category/459-cse-application-form"]'
+);
+
+if (cseApplicationFormLink) {
+  cseApplicationFormLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "cse_application_form_click");
+    }
+  });
+}
+
+// Requirements - Career Service Professional Application Form
+const professionalApplicationFormLink = document.querySelector(
+  'a[href="https://csc.gov.ph/phocadownload/userupload/erpo/forms/exam-app-forms/Annex%20A1_CS%20Form%20100_Revised%202023_CSEP_a1_edited_a1.pdf"]'
+);
+
+if (professionalApplicationFormLink) {
+  professionalApplicationFormLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "professional_application_form_click");
+    }
+  });
+}
+
+// Requirements - Career Service SubProfessional Application Form
+const subProfessionalApplicationFormLink = document.querySelector(
+  'a[href="https://csc.gov.ph/phocadownload/userupload/erpo/forms/exam-app-forms/Annex%20A2_CS%20Form%20100_Revised%202023_CSESP_a1_edited_a1.pdf"]'
+);
+
+if (subProfessionalApplicationFormLink) {
+  subProfessionalApplicationFormLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "subprofessional_application_form_click");
+    }
+  });
+}
+
+const announcementLinks = document.querySelectorAll('a[href="https://example.com"]');
+
+// CSC official announcement 1
+if (announcementLinks[0]) {
+  announcementLinks[0].addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "requirements_csc_announcement_1_click");
+    }
+  });
+}
+
+// CSC official announcement 2
+if (announcementLinks[1]) {
+  announcementLinks[1].addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "requirements_csc_announcement_2_click");
+    }
+  });
+}
+
+// CSC official announcement 3
+if (announcementLinks[2]) {
+  announcementLinks[2].addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "requirements_csc_announcement_3_click");
+    }
+  });
+}
