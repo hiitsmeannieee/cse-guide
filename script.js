@@ -316,7 +316,7 @@ if (announcementLink) {
   });
 }
 
-// FAQs - Get Your Brainbox Book Reviewer - TikTok Shop
+// FAQs - Brainbox Book Reviewer - TikTok Shop
 const brainboxTiktokLink = document.querySelector('a[href="https://vt.tiktok.com/ZSqK3Hfmt/"]');
 
 if (brainboxTiktokLink) {
@@ -327,11 +327,11 @@ if (brainboxTiktokLink) {
   });
 }
 
-// FAQs - Get Your Brainbox Book Reviewer - Shopee
-const brainboxShopeeLink = document.querySelector('a[href="https://vt.tiktok.com/ZS4x48kby/"]');
+// FAQs - Brainbox Book Reviewer - Shopee
+const shopeeLinks = document.querySelectorAll('a[href="https://vt.tiktok.com/ZS4x48kby/"]');
 
-if (brainboxShopeeLink) {
-  brainboxShopeeLink.addEventListener("click", () => {
+if (shopeeLinks[0]) {
+  shopeeLinks[0].addEventListener("click", () => {
     if (typeof gtag === "function") {
       gtag("event", "faqs_brainbox_shopee_click");
     }
@@ -339,7 +339,7 @@ if (brainboxShopeeLink) {
 }
 
 // FAQs - Faber-Castell Pens - TikTok Shop
-const faberCastellTiktokLink = document.querySelector('a[href="https://vt.tiktok.com/ZSqK3Hfmt/"]');
+const faberCastellTiktokLink = document.querySelector('a[href="https://vt.tiktok.com/ZS9AyKub5AbpC-cnM3S/"]');
 
 if (faberCastellTiktokLink) {
   faberCastellTiktokLink.addEventListener("click", () => {
@@ -350,10 +350,8 @@ if (faberCastellTiktokLink) {
 }
 
 // FAQs - Faber-Castell Pens - Shopee
-const faberCastellShopeeLink = document.querySelector('a[href="https://vt.tiktok.com/ZS4x48kby/"]');
-
-if (faberCastellShopeeLink) {
-  faberCastellShopeeLink.addEventListener("click", () => {
+if (shopeeLinks[1]) {
+  shopeeLinks[1].addEventListener("click", () => {
     if (typeof gtag === "function") {
       gtag("event", "faqs_faber_castell_shopee_click");
     }
