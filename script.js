@@ -373,4 +373,74 @@ if (faberCastellShopeeLink) {
 }
 
 
+// ==================================
+// SOCIAL MEDIA LINK TRACKING
+// ==================================
+
+const tiktokLink = document.querySelector(
+  'a[href="https://www.tiktok.com/@hiitsmeannieee"]'
+);
+
+if (tiktokLink) {
+  tiktokLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "annie_tiktok_click");
+    }
+  });
+}
+
+
+const facebookLink = document.querySelector(
+  'a[href="https://www.facebook.com/hiitsmeannieee"]'
+);
+
+if (facebookLink) {
+  facebookLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "annie_facebook_click");
+    }
+  });
+}
+
+
+// ==================================
+// FOOTER LINK TRACKING
+// ==================================
+
+const footerLinks = document.querySelectorAll(
+  'a[href="https://www.csc.gov.ph/"]'
+);
+
+// CSC Official Website
+if (footerLinks[0]) {
+  footerLinks[0].addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "footer_csc_website_click");
+    }
+  });
+}
+
+// CSC Official Announcement
+if (footerLinks[1]) {
+  footerLinks[1].addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "footer_csc_announcement_click");
+    }
+  });
+}
+
+
+// ==================================
+// DAILY QUOTE BUTTON TRACKING
+// ==================================
+
+const dailyQuoteButton = document.querySelector(".daily-quote-button");
+
+if (dailyQuoteButton) {
+  dailyQuoteButton.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "daily_quote_click");
+    }
+  });
+}
 
