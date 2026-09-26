@@ -117,3 +117,33 @@ function closeDailyQuote() {
     .getElementById("dailyQuoteOverlay")
     .classList.remove("show");
 }
+
+
+// =========================
+// HOMEPAGE CARD CLICK TRACKING (index.html)
+// =========================
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardEvents = {
+    "paano/paano.html": "paano_card_click",
+    "eserve/eserve.html": "eserve_card_click",
+    "requirements/requirements.html": "requirements_card_click",
+    "faqs/faqs.html": "faqs_card_click"
+  };
+
+  document.querySelectorAll(".cards-grid a.card").forEach(link => {
+    const href = link.getAttribute("href");
+    const eventName = cardEvents[href];
+
+    if (!eventName) return;
+
+    link.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", eventName, {
+          link_url: href,
+          link_text: link.innerText.trim()
+        });
+      }
+    });
+  });
+});
