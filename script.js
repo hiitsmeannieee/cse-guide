@@ -374,73 +374,108 @@ if (faberCastellShopeeLink) {
 
 
 // ==================================
-// SOCIAL MEDIA LINK TRACKING
+// LOAD FOOTER
 // ==================================
 
-const tiktokLink = document.querySelector(
-  'a[href="https://www.tiktok.com/@hiitsmeannieee"]'
-);
+fetch(footerPath)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
 
-if (tiktokLink) {
-  tiktokLink.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "annie_tiktok_click");
+    // Footer links
+    const footerLinks = document.querySelectorAll(
+      'a[href="https://www.csc.gov.ph/"]'
+    );
+
+    // CSC Official Website
+    if (footerLinks[0]) {
+      footerLinks[0].addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "footer_csc_website_click");
+        }
+      });
+    }
+
+    // CSC Official Announcement
+    if (footerLinks[1]) {
+      footerLinks[1].addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "footer_csc_announcement_click");
+        }
+      });
     }
   });
-}
-
-
-const facebookLink = document.querySelector(
-  'a[href="https://www.facebook.com/hiitsmeannieee"]'
-);
-
-if (facebookLink) {
-  facebookLink.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "annie_facebook_click");
-    }
-  });
-}
-
-
-// ==================================
-// FOOTER LINK TRACKING
-// ==================================
-
-const footerLinks = document.querySelectorAll(
-  'a[href="https://www.csc.gov.ph/"]'
-);
-
-// CSC Official Website
-if (footerLinks[0]) {
-  footerLinks[0].addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "footer_csc_website_click");
-    }
-  });
-}
-
-// CSC Official Announcement
-if (footerLinks[1]) {
-  footerLinks[1].addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "footer_csc_announcement_click");
-    }
-  });
-}
 
 
 // ==================================
-// DAILY QUOTE BUTTON TRACKING
+// LOAD SOCIAL MEDIA
 // ==================================
 
-const dailyQuoteButton = document.querySelector(".daily-quote-button");
+fetch(smPath)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("sm").innerHTML = data;
 
-if (dailyQuoteButton) {
-  dailyQuoteButton.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "daily_quote_click");
+    // TikTok
+    const tiktokLink = document.querySelector(
+      'a[href="https://www.tiktok.com/@hiitsmeannieee"]'
+    );
+
+    if (tiktokLink) {
+      tiktokLink.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "annie_tiktok_click");
+        }
+      });
+    }
+
+    // Facebook
+    const facebookLink = document.querySelector(
+      'a[href="https://www.facebook.com/hiitsmeannieee"]'
+    );
+
+    if (facebookLink) {
+      facebookLink.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "annie_facebook_click");
+        }
+      });
     }
   });
-}
+
+
+// =========================
+// DAILY QUOTE
+// =========================
+
+const dailyQuotePath = isNestedPage
+  ? "../daily-quote/daily-quote.html"
+  : "daily-quote/daily-quote.html";
+
+fetch(dailyQuotePath)
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("daily-quote").innerHTML = data;
+
+    const dailyQuoteIcon = document.querySelector(".daily-quote-button img");
+
+    if (dailyQuoteIcon) {
+      dailyQuoteIcon.src = isNestedPage
+        ? "../images/icon.png"
+        : "images/icon.png";
+    }
+
+    // Daily Quote button tracking
+    const dailyQuoteButton = document.querySelector(".daily-quote-button");
+
+    if (dailyQuoteButton) {
+      dailyQuoteButton.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "daily_quote_click");
+        }
+      });
+    }
+
+    setDailyQuote();
+  });
 
