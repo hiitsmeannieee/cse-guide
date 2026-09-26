@@ -290,9 +290,87 @@ if (announcementLinks[2]) {
 }
 
 
-// ===========================
+// ==================================
 // "FAQS" PAGE LINK TRACKING
-// ===========================
+// ==================================
+
+// FAQs - ONSA
+const onsaLink = document.querySelector(
+  'a[href="https://erpo.csc.gov.ph/eNOSAv3/"]'
+);
+
+if (onsaLink) {
+  onsaLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "faqs_onsa_click");
+    }
+  });
+}
+
+// FAQs - CSC Official Announcement #1
+const faqsAnnouncementLink = document.querySelector(
+  'a[href="https://example.com"]'
+);
+
+if (faqsAnnouncementLink) {
+  faqsAnnouncementLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "faqs_csc_announcement_1_click");
+    }
+  });
+}
+
+// FAQs - Get Your Brainbox Book Reviewer - TikTok Shop
+const brainboxTiktokLink = document.querySelector(
+  'a[href="https://vt.tiktok.com/ZSqK3Hfmt/"]'
+);
+
+if (brainboxTiktokLink) {
+  brainboxTiktokLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "faqs_brainbox_tiktok_shop_click");
+    }
+  });
+}
+
+// FAQs - Get Your Brainbox Book Reviewer - Shopee
+const brainboxShopeeLink = document.querySelector(
+  'a[href="https://vt.tiktok.com/ZS4x48kby/"]'
+);
+
+if (brainboxShopeeLink) {
+  brainboxShopeeLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "faqs_brainbox_shopee_click");
+    }
+  });
+}
+
+// FAQs - Get Faber-Castell Pens - TikTok Shop
+const faberCastellTiktokLink = document.querySelector(
+  'a[href="https://vt.tiktok.com/ZS9AyKub5AbpC-cnM3S/"]'
+);
+
+if (faberCastellTiktokLink) {
+  faberCastellTiktokLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "faqs_faber_castell_tiktok_shop_click");
+    }
+  });
+}
+
+// FAQs - Get Faber-Castell Pens - Shopee
+const faberCastellShopeeLink = document.querySelector(
+  'a[href="https://vt.tiktok.com/ZS4x48kby/"]'
+);
+
+if (faberCastellShopeeLink) {
+  faberCastellShopeeLink.addEventListener("click", () => {
+    if (typeof gtag === "function") {
+      gtag("event", "faqs_faber_castell_shopee_click");
+    }
+  });
+}
 
 
 
