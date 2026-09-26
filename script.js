@@ -175,12 +175,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // CSC Official Announcement
+  // CSC Official Announcement - Paano Page
   const announcementLink = document.querySelector('a[href="https://example.com"]');
+  
   if (announcementLink) {
     announcementLink.addEventListener("click", () => {
       if (typeof gtag === "function") {
-        gtag("event", "csc_announcement_click");
+        gtag("event", "paano_csc_announcement_click");
       }
     });
   }
