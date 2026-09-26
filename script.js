@@ -147,3 +147,51 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+
+// =========================
+// "PAANO" PAGE LINK TRACKING
+// =========================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // eServe
+  const eserveLink = document.querySelector('a[href="https://services.csc.gov.ph/"]');
+  if (eserveLink) {
+    eserveLink.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "eserve_click");
+      }
+    });
+  }
+
+  // OCSEAS
+  const ocseasLink = document.querySelector('a[href="https://ocseas.csc.gov.ph/home"]');
+  if (ocseasLink) {
+    ocseasLink.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "ocseas_click");
+      }
+    });
+  }
+
+  // CSC Official Announcement
+  const announcementLink = document.querySelector('a[href="https://example.com"]');
+  if (announcementLink) {
+    announcementLink.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "csc_announcement_click");
+      }
+    });
+  }
+
+  // Official Facebook Pages
+  document.querySelectorAll(".facebook-pages a").forEach(link => {
+    link.addEventListener("click", () => {
+      if (typeof gtag === "function") {
+        gtag("event", "csc_facebook_click");
+      }
+    });
+  });
+
+});
