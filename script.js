@@ -119,9 +119,9 @@ function closeDailyQuote() {
 }
 
 
-// =========================
+// ============================================
 // HOMEPAGE CARD CLICK TRACKING (index.html)
-// =========================
+// ============================================
 
 document.addEventListener("DOMContentLoaded", () => {
   const cardEvents = {
@@ -149,9 +149,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// =========================
+// ===========================
 // "PAANO" PAGE LINK TRACKING
-// =========================
+// ===========================
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (eserveLink) {
     eserveLink.addEventListener("click", () => {
       if (typeof gtag === "function") {
-        gtag("event", "eserve_click");
+        gtag("event", "paano_page_eserve_link_click");
       }
     });
   }
@@ -195,4 +195,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+});
+
+
+// ==============================
+// "E-SERVE" PAGE LINK TRACKING
+// ==============================
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.location.pathname.includes("/eserve/")) {
+    const eserveLink = document.querySelector(
+      'a[href="https://services.csc.gov.ph/"]'
+    );
+    if (eserveLink) {
+      eserveLink.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag("event", "eserve_page_eserve_link_click");
+        }
+      });
+    }
+  }
 });
