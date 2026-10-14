@@ -344,6 +344,26 @@ if (faberCastellTiktokLink) {
 }
 
 
+
+/* =========================================
+   SOCIAL MEDIA - PERSONAL TIKTOK
+========================================= */
+
+document.addEventListener("click", function (event) {
+  const tiktokLink = event.target.closest(
+    '#sm a[href="https://www.tiktok.com/@hiitsmeannieee"]'
+  );
+
+  if (tiktokLink && typeof gtag === "function") {
+    gtag("event", "annie_tiktok_click", {
+      link_url: tiktokLink.href,
+      link_text: "Annie TikTok Profile"
+    });
+  }
+});
+
+
+
 /* =========================================
    RESTORE HOMEPAGE SCROLL POSITION
 ========================================= */
