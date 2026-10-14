@@ -369,3 +369,50 @@ if (faberCastellShopeeLink) {
   });
 }
 
+
+/* =========================================
+   RESTORE HOMEPAGE SCROLL POSITION
+========================================= */
+
+(function () {
+  const isHomepage =
+    window.location.pathname.endsWith("/index.html") ||
+    window.location.pathname.endsWith("/cse-guide/") ||
+    window.location.pathname.endsWith("/cse-guide");
+
+  const scrollKey = "cseGuideHomepageScroll";
+
+  if (isHomepage) {
+    // Restore the previous scroll position when returning
+    const savedPosition = sessionStorage.getItem(scrollKey);
+
+    if (savedPosition !== null) {
+      history.scrollRestoration = "manual";
+
+      const restoreScroll = () => {
+        window.scrollTo(0, Number(savedPosition));
+        sessionStorage.removeItem(scrollKey);
+      };
+
+      if (document.readyState === "complete") {
+        requestAnimationFrame(restoreScroll);
+      } else {
+        window.addEventListener("load", () => {
+          requestAnimationFrame(restoreScroll);
+        }, { once: true });
+      }
+    }
+
+    // Save the position when a homepage guide card is clicked
+    document.querySelectorAll(".cards-grid a.card").forEach(card => {
+      card.addEventListener("click", () => {
+        sessionStorage.setItem(
+          scrollKey,
+          String(window.scrollY)
+        );
+      });
+    });
+  }
+})();
+
+
