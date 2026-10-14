@@ -55,7 +55,7 @@ fetch(dailyQuotePath)
   });
 
 const dailyQuotes = [
-  "If you saw this, this is your sign. Papasa ka. ✨",
+  "If you're reading this, this is your sign. Papasa ka. ✨",
   "'Wag ka na mag-overthink. Papasa ka ngani. ✨",
   'From "sana pumasa" to "FINALLY PASSED". Claim mo na! ✨',
   "You! Yes you! You'll become a CSE Passer!!! 🤍",
