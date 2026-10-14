@@ -68,9 +68,6 @@ const dailyQuotes = [
   "Your name will be on that #list. Claim it. ✨",
   "Congratulations! CSE PASSER ka na soon! ✨🍀",
   "Ah basta, CSE passer ka na soon. PERIOD ✨",
-  "'Whatever you do, work at it with all your heart, as working for the Lord, not for human masters' — Colossians 3:23",
-  "'Cast all your anxiety on him because he cares for you.' — 1 Peter 5:7 (NIV)",
-  "'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to God.' — Philippians 4:6–7 (NIV)",
 ];
 
 function getPhilippineDate() {
