@@ -330,41 +330,15 @@ if (brainboxTiktokLink) {
   });
 }
 
-// FAQs - Get Your Brainbox Book Reviewer - Shopee
-const brainboxShopeeLink = document.querySelector(
-  'a[href="https://vt.tiktok.com/ZS4x48kby/"]'
-);
-
-if (brainboxShopeeLink) {
-  brainboxShopeeLink.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "faqs_brainbox_shopee_click");
-    }
-  });
-}
-
 // FAQs - Get Faber-Castell Pens - TikTok Shop
 const faberCastellTiktokLink = document.querySelector(
-  'a[href="https://vt.tiktok.com/ZS9AyKub5AbpC-cnM3S/"]'
+  'a[href="https://vt.tiktok.com/ZS9UFGTEHcBgU-PeLFc/"]'
 );
 
 if (faberCastellTiktokLink) {
   faberCastellTiktokLink.addEventListener("click", () => {
     if (typeof gtag === "function") {
       gtag("event", "faqs_faber_castell_tiktok_shop_click");
-    }
-  });
-}
-
-// FAQs - Get Faber-Castell Pens - Shopee
-const faberCastellShopeeLink = document.querySelector(
-  'a[href="https://vt.tiktok.com/ZS4x48kby/"]'
-);
-
-if (faberCastellShopeeLink) {
-  faberCastellShopeeLink.addEventListener("click", () => {
-    if (typeof gtag === "function") {
-      gtag("event", "faqs_faber_castell_shopee_click");
     }
   });
 }
