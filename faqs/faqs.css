@@ -538,17 +538,18 @@ button {
 
 }
 
-/* Faber-Castell recommendation image */
-.recommendation-link .guide-image {
+
+/* Faber-Castell */
+.ballpen-guide-image img {
+  width: 85%;
+  height: auto;
   display: block;
-  width: 100%;
-  max-width: 220px;
-  margin-top: 10px;
+  margin: 0 auto;
 }
 
-.recommendation-link .guide-image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+/* Mobile View */
+@media (max-width: 768px) {
+  .ballpen-guide-image img {
+    width: 90%;
+  }
 }
