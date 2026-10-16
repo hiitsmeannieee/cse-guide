@@ -271,6 +271,30 @@ button {
   object-fit: contain;
 }
 
+/* Number 4 */
+.guide-images-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+}
+
+.guide-images-row .guide-image {
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  margin-top: 17px;
+}
+
+.guide-images-row .guide-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 
 /* =========================
    FACEBOOK DROPDOWN
