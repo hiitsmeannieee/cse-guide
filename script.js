@@ -345,7 +345,7 @@ if (faberCastellTiktokLink) {
 
 
 /* =========================================
-   SOCIAL MEDIA - PERSONAL TIKTOK
+   SOCIAL MEDIA
 ========================================= */
 
 document.addEventListener("click", function (event) {
@@ -357,6 +357,19 @@ document.addEventListener("click", function (event) {
     gtag("event", "annie_tiktok_click", {
       link_url: tiktokLink.href,
       link_text: "Annie TikTok Profile"
+    });
+  }
+});
+
+document.addEventListener("click", function (event) {
+  const fbLink = event.target.closest(
+    '#sm a[href="https://www.facebook.com/profile.php?id=100057326166377"]'
+  );
+
+  if (fbLink && typeof gtag === "function") {
+    gtag("event", "annie_fb_click", {
+      link_url: fbLink.href,
+      link_text: "Annie Facebook Profile"
     });
   }
 });
