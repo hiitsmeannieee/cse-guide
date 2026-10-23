@@ -62,7 +62,6 @@ const dailyQuotes = [
   "This is your sign. You will pass the CSE. 1 take, last take, no retake. CLAIM IT! ✨",
   "Sending you CSE PASSER dust!!! ✨",
   "Your biggest plot twist next year: Papasa ka sa CSE. 🍀",
-  "PAPASA KA! KAYA MO YAN! 💪✨",
   "✨ basbas dust ✨ CSE PASSER KA NA NEXT YEAR!",
   "Your name will be on that #list. Claim it. ✨",
   "Congratulations! CSE PASSER ka na soon! ✨🍀",
