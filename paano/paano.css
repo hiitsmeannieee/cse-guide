@@ -497,3 +497,9 @@ button {
   }
 
 }
+
+.guide-images-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
