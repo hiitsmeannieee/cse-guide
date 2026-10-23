@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // CSC Official Announcement - Paano Page
-  const announcementLink = document.querySelector('a[href="https://example.com"]');
+  const announcementLink = document.querySelector('a[href="https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_06_Conduct%20of%2014%20March%202027%20CSE-PPT%20orig%20signed.pdf"]');
   if (announcementLink) {
     announcementLink.addEventListener("click", () => {
       if (typeof gtag === "function") {
@@ -255,7 +255,7 @@ if (subProfessionalApplicationFormLink) {
   });
 }
 
-const announcementLinks = document.querySelectorAll('a[href="https://example.com"]');
+const announcementLinks = document.querySelectorAll('a[href="https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_06_Conduct%20of%2014%20March%202027%20CSE-PPT%20orig%20signed.pdf"]');
 
 // CSC official announcement 1
 if (announcementLinks[0]) {
@@ -304,7 +304,7 @@ if (onsaLink) {
 
 // FAQs - CSC Official Announcement #1
 const faqsAnnouncementLink = document.querySelector(
-  'a[href="https://example.com"]'
+  'a[href="https://csc.gov.ph/phocadownload/userupload/erpo/announcements/2026/ExamAnn_2026_06_Conduct%20of%2014%20March%202027%20CSE-PPT%20orig%20signed.pdf"]'
 );
 
 if (faqsAnnouncementLink) {
@@ -408,7 +408,7 @@ document.addEventListener("click", function (event) {
       }
     }
 
-    // Save the position when a homepage guide card is clicked
+    // Save the position
     document.querySelectorAll(".cards-grid a.card").forEach(card => {
       card.addEventListener("click", () => {
         sessionStorage.setItem(
