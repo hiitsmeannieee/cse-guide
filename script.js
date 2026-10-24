@@ -317,7 +317,7 @@ if (faqsAnnouncementLink) {
 
 // FAQs - Get Your Brainbox Book Reviewer - TikTok Shop
 const brainboxTiktokLink = document.querySelector(
-  'a[href="https://vt.tiktok.com/ZSqK3Hfmt/"]'
+  'a[href="https://vt.tiktok.com/ZS9UoMQku5UWN-55buN/"]'
 );
 
 if (brainboxTiktokLink) {
